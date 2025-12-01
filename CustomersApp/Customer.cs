@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CustomersApp;
 
-internal class Customer
+public class Customer
 {
     public int Id { get; set; }
     public string CompanyName { get; set; } = default!;

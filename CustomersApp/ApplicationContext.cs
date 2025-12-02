@@ -30,7 +30,15 @@ public class ApplicationContext : DbContext
             .Property(o => o.PriceTotal)
             .HasColumnType(SqlDbType.Money.ToString());
 
-        //modelBuilder.Entity<Customer>().HasData(
-        //    )
+        modelBuilder.Entity<Customer>().HasData(
+                new Customer { Id = 1, CompanyName = "Volvo", City = "Göteborg" },
+                new Customer { Id = 2, CompanyName = "Saab", City = "Trollhättan" },
+                new Customer { Id = 3, CompanyName = "Scania", City = "Södertälje" },
+                new Customer { Id = 4, CompanyName = "Ericsson", City = "Stockholm" },
+                new Customer { Id = 5, CompanyName = "IKEA", City = "Älmhult" },
+                new Customer { Id = 6, CompanyName = "Husqvarna", City = "Jönköping" },
+                new Customer { Id = 7, CompanyName = "Electrolux", City = "Stockholm" },
+                new Customer { Id = 8, CompanyName = "SKF", City = "Göteborg" }
+                );
     }
 }

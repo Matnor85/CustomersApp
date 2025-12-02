@@ -8,7 +8,10 @@
             //Install - Package Microsoft.Extensions.Configuration.Json
             //Install - Package Microsoft.EntityFrameworkCore.SqlServer
             //Install - Package Microsoft.EntityFrameworkCore.Tools
-            Console.WriteLine("Hello, World!");
+            foreach(var customer in new ApplicationContext().Customers)
+            {
+                Console.WriteLine($"{customer.Id} {customer.CompanyName} {customer.City}");
+            }
         }
     }
 }

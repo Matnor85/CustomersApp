@@ -40,5 +40,13 @@ public class ApplicationContext : DbContext
                 new Customer { Id = 7, CompanyName = "Electrolux", City = "Stockholm" },
                 new Customer { Id = 8, CompanyName = "SKF", City = "Göteborg" }
                 );
+
+        modelBuilder.Entity<Order>().HasData(
+                new Order { Id = 1, Created = new DateTime(2023, 1, 15), PriceTotal = 1500.00, CustomerId = 1 },
+                new Order { Id = 2, Created = new DateTime(2023, 2, 20), PriceTotal = 2500.00, CustomerId = 2 },
+                new Order { Id = 3, Created = new DateTime(2023, 3, 10), PriceTotal = 3500.00, CustomerId = 5 },
+                new Order { Id = 4, Created = new DateTime(2023, 4, 5), PriceTotal = 4500.00, CustomerId = 4 },
+                new Order { Id = 5, Created = new DateTime(2023, 5, 25), PriceTotal = 5500.00, CustomerId = 5 }
+                );
     }
 }

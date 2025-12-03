@@ -10,4 +10,5 @@ public class Order
     public int CustomerId { get; set; }
     public double PriceTotal { get; set; }
     public Customer Customer { get; set; } = default!;
+    //public DateTime Created { get; set; }
 }
